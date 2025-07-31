@@ -1,0 +1,812 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: -apple-system, sans-serif;
+}
+ 
+:root{
+    --bg-color: #000;
+    --snd-bg-color: #111;
+    --text-color: #000;
+    --main-color:rgb(255, 0, 98);
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+section {
+    min-height: 100vh;
+    padding: 10rem 8% 2rem;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 9%;
+    background: rgb(255, 255, 255, 0.5);
+    backdrop-filter: blur(24px);
+    transition: all 0.5s ease;
+}
+
+.logo {
+    font-size: 3rem;
+    color: var(--text-color);
+    font-weight: 800;
+    cursor:pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.logo:hover {
+    transform: scale(1.3);
+}
+
+span {
+    color: var(--main-color);
+}
+
+
+
+.navbar {
+    display: flex;
+}
+
+.navbar a {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: var(--text-color);
+    margin-left: 4rem;
+    transition: all 0.5s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.navbar a:hover,
+.navbar a:active {
+    color: var(--main-color);
+    border-bottom: 3px solid var(--main-color);
+}
+
+.nav-btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: transparent;
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+    border-radius: 1rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    transition: all 0.5s ease;
+}
+
+.nav-btn:hover {
+    background: var(--main-color);
+    color: var(--text-color);
+    box-shadow: 0 0 18px var(--main-color);
+}
+
+#menu-icon {
+    font-size: 3.6rem;
+    color: var(--main-color);
+    cursor: pointer;
+    display: none;
+}
+
+/*  HOME SECTION CODE */
+
+.home {
+  min-height: 100vh;
+  background-image: url('images/image_1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+
+
+
+
+
+.home-con h3 {
+    font-size: 5rem;
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+.home-con h3 span {
+    font-size: 4rem;
+    font-weight: 550;
+}
+
+span {
+    color: var(--main-color);
+}
+
+.home-con h1 {
+    font-size: 5.6rem;
+    color: var(--text-color);
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.home-img {
+    width: 45vw;
+
+}
+
+.home-img::before {
+    content: 'FITNESS';
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    transform: translateX(-50%);
+    font-size: 20rem;
+    font-weight: 400;
+    line-height: 20rem;
+    color: var(--text-color);
+    opacity: 0.1;
+    z-index: -1;
+}
+.home-con p {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--main-color);
+    border-radius: 1rem;
+    box-shadow: none;
+    color: var(--bg-color);
+    font-size: 1.6rem;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    transition: 0.5s ease;
+}
+
+.btn:hover {
+    color: white;
+    box-shadow: 0 0 1.6rem var(--main-color);
+}
+
+/* BMI calculator section code */
+.bmi {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;       /* Horizontally centers the content */
+    justify-content: center;   /* Vertically centers it */
+    min-height: 100vh;
+    padding: 5rem 8%;
+}
+
+
+.bmi-head {
+    text-align: center;
+    font-size: 6.5rem;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+}
+
+.bmi-head span {
+    color: var(--main-color);
+}
+.bmi-con {
+    height: 450px;
+    width: 380px;
+    box-shadow: 0 0 20px 10px rgb(255, 0, 98);
+    padding: 50px;
+    border-radius: 30px;
+    text-align: center;
+    margin-top: 50px;
+   
+}
+
+.bmi-con h1 {
+    margin-bottom: 20px;
+    color: rgb(0, 0, 0);
+    font-size: 3rem;
+    font-weight: 700; 
+}
+
+.bmi-con p {
+    font-size: 1.6rem;
+    color: rgb(0, 0, 0);
+    margin-bottom: 20px;
+}
+
+.bmi-con input {
+    border:none;
+    border-bottom: 1px solid var(--main-color);
+    width: 50%;
+    margin-bottom: 20px;
+    outline: none;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+.bmi-con button {
+    width: 100%;
+    height: 35px;
+    margin-top: 25px;
+    border-radius: 20px;
+    border: none;
+    background-color: var(--main-color);
+    color: #fff;
+    font-size: 1.6rem;
+    transition: all 0.3s ease;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 1.6rem;
+    color: rgb(0, 0, 0);
+}
+
+/* SERVICES SECTION CODE */
+
+.gym {
+    background: #fff;
+   
+}   
+
+.heading {
+    text-align: center;
+    font-size: 6.5rem;
+}
+
+.gym-con {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    align-items: center;
+    gap: 2.3rem;
+    margin-top: 4.1rem;
+}
+
+.row {
+    background: #000;
+    border-radius: 27px;
+    border: 1px solid transparent;
+    box-shadow: 0 0 5px var(--main-color);
+    padding: 20px;
+    transition: all 0.5s ease;
+}
+
+.row img {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 27px;
+    margin-bottom: 1.4rem;
+}
+
+.row h4{
+    color: #fff;
+    font-size:25px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.row:hover {
+    border: 1px solid var(--main-color);
+    transform: translateY(-5px) scale(1.04);
+    cursor: pointer;
+}
+
+.yoga {
+    background: #fff;
+    
+}   
+
+.headings {
+    text-align: center;
+    font-size: 6.5rem;
+}
+
+.yoga-con {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    align-items: center;
+    gap: 2.3rem;
+    margin-top: 4.1rem;
+}
+
+.card {
+    background: #000;
+    border-radius: 27px;
+    border: 1px solid transparent;
+    box-shadow: 0 0 5px var(--main-color);
+    padding: 20px;
+    transition: all 0.5s ease;
+}
+
+.card img {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 27px;
+    margin-bottom: 1.4rem;
+}
+
+.card h4{
+    color: #fff;
+    font-size:25px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.card:hover {
+    border: 1px solid var(--main-color);
+    transform: translateY(-5px) scale(1.04);
+    cursor: pointer;
+}
+
+/*DIET SECTION CODE */
+
+.dietplan {
+  background: #fff;
+  padding: 5rem 8%;
+  text-align: center;
+  scroll-margin-top: 100px;
+}
+
+.diet-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  margin: 0.5rem;
+  padding: 1rem 2.5rem;
+  background: var(--main-color);
+  color: #fff;
+  border-radius: 8px;
+  font-size: 1.6rem;
+  cursor: pointer;
+  border: none;
+  transition: 0.3s;
+}
+
+.tab-btn.active,
+.tab-btn:hover {
+  background: #000;
+  color: var(--main-color);
+}
+
+.diet-content {
+  background: var(--bg-color);
+  color: #fff;
+  
+  height: 500px;
+  padding: 7rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 0 10px var(--main-color);
+  animation: fadeIn 0.5s ease;
+}
+
+.diet-content h3 {
+  font-size: 3.5rem;
+  padding: 50px;
+  margin:0;
+  color: var(--main-color);
+}
+
+.diet-content ul {
+  text-align: left;
+  font-size: 2.6rem;
+  margin-bottom: 2rem;
+}
+
+.diet-content p {
+  padding: 5rem 0;
+  font-size: 2.6rem;
+  color: #ccc;
+}
+
+.daily-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.toggle-btn {
+  padding: 0.8rem 1.5rem;
+  font-size: 1.4rem;
+  background-color: var(--main-color);
+  border: none;
+  color: #fff;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Premium section code */
+.premium {
+    background: #fff;
+}
+
+.premium-head {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    align-items: center;
+    gap: 2.3rem;
+    margin-top: 4.2rem;
+}
+
+.box {
+    padding: 30px 30px 50px 30px;
+    height: 40rem;
+    background: var(--bg-color);
+    border-radius: 28px;
+    border: 1px solid transparent;
+    box-shadow: 0 0 5px var(--main-color);
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.box h3 {
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.box h2{
+    color: var(--main-color);
+    font-size: 43px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.box ul li {
+    color: #fff;
+    list-style: disc;
+    font-size: 1.7rem;
+    padding-bottom:1.2rem;
+}
+
+.box a {
+    color: var(--main-color);
+    display: inline-block;
+    font-size: 22px;
+    line-height: 1.2rem;
+    font-weight: 700;
+    padding: 7px 0;
+    border-bottom: 2px solid var(--main-color);
+    transition: all 0.5s ease;
+}
+
+.box i {
+    vertical-align: middle;
+    font-size: 25px;
+    color: #fff;
+    margin-left: 5px;
+}
+
+.box a:hover {
+    border-bottom: 2px solid var(--main-color);
+}
+
+.box:hover {
+    border: 1px solid var(--main-color);
+    transform: translateY(-5px) scale(1.04);
+}
+.box .btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--main-color);
+    border-radius: 1rem;
+    box-shadow: none;
+    color: var(--bg-color);
+    font-size: 1.6rem;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    transition: 0.5s ease;
+}
+/* premium Section */
+.join-premium-section {
+  background: #fff;
+  padding: 40px;
+  text-align: center;
+}
+.join-premium-section h2 {
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+.payment-form {
+  background: #f9f9f9;
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 25px;
+  box-shadow: 0 4px 12px rgb(255, 0, 153);
+  border-radius: 10px;
+
+}
+
+.payment-form input,
+.payment-form select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.payment-form button {
+  background-color: #ff007f;
+  color: #fff;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+
+
+/* === Review Section with Card Layout === */
+/* === Review Section with Card Layout === */
+.review-section {
+  background: #fff;
+  padding: 60px 20px;
+  color: #111;
+  text-align: center;
+}
+
+.review-section .headings {
+  font-size: 6rem;
+  font-weight: 900;
+  margin-bottom: 30px;
+  color: #ff007f;
+}
+
+.review-section .headings span {
+  color: #ff007f;
+}
+.review-section .review-subtitle {
+    font-size: 2.5rem;
+    color: #555;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+/* Review Form */
+.review-form {
+  background:rgb(183, 160, 176);
+  padding: 25px;
+  height : 350px;
+  width: 700px;
+  max-width: 600px;
+  margin: 0 auto 50px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.review-form input[type="text"],
+.review-form textarea {
+  width: 100%;
+  background: #fff;
+  color: #111;
+  border: 1px solid #ccc;
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.review-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.review-form .star-rating {
+  display: flex;
+  justify-content: center;
+  flex-direction: row-reverse;
+  margin-bottom: 15px;
+}
+
+.review-form .star-rating input {
+  display: none;
+}
+
+.review-form .star-rating label {
+  font-size: 30px;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+  padding: 0 5px;
+}
+
+.review-form .star-rating input:checked ~ label,
+.review-form .star-rating label:hover,
+.review-form .star-rating label:hover ~ label {
+  color: gold;
+}
+
+.review-form button {
+  background: #ff007f;
+  color: #fff;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+.review-form button:hover {
+  background: #e60073;
+}
+
+/* Review Cards */
+.review-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.review-card {
+  background: #fff;
+  border: 1px solid #eee;
+  height: 250px;
+  width:300px;
+  font-size: 2.1rem;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+  box-shadow: 0 6px 14px rgb(248, 0, 203);
+  transition: transform 0.2s;
+}
+
+.review-card:hover {
+  transform: translateY(-5px);
+}
+
+.review-card .review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.review-card .stars {
+  color: gold;
+  font-size: 18px;
+}
+
+.review-card p {
+  font-size: 15px;
+  color: #333;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.review-card small {
+  font-size: 12px;
+  color: #777;
+}
+
+
+/* Existing footer styles */
+.footer {
+    position: relative;
+    width: 100%;
+    padding: 40px 0;
+    background: rgb(229, 221, 221);
+}
+
+.footer .social {
+    text-align: center;
+    padding-bottom: 20px;
+    color: var(--main-color);
+}
+
+.footer .social a {
+    font-size: 25px;
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 10px;
+    transition: 0.5s ease-in-out;
+}
+
+.footer .social a:hover {
+    transform: scale(1.2) translateY(-10px);
+    background: var(--main-color);
+    color: #fff;
+    box-shadow: 0 0 25px var(--main-color);
+}
+
+.footer .copyright {
+    text-align: center;
+    font-size: 16px;
+    color: var(--text-color);
+    margin-top: 20px;
+}
+
+/* Media Queries for responsiveness */
+
+/* Footer section code */
+.footer {
+    position: relative;
+    botttom: 0;
+    width: 100%;
+    padding: 40px 0;
+    background: rgb(229, 221, 221);
+}
+
+.footer .social {
+    text-align: center;
+    padding-bottom: 20px;
+    color: var(--main-color);
+}
+
+.footer .social a {
+    font-size: 25px;
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 10px;
+    transition: 0.5s ease-in-out;
+}
+
+.footer .social a:hover {
+    transform: scale(1.2) translateY(-10px);
+
+    background: var(--main-color);
+    color: #fff;
+    box-shadow: 0 0 25px var(--main-color);
+}
+
+.footer .copyright {
+    text-align: center;
+    font-size: 16px;
+    color: var(--text-color);
+    margin-top: 20px;
+}
+
+
