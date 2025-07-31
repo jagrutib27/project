@@ -12,8 +12,6 @@ A dynamic and interactive fitness website that offers personalized workout plans
 - 🧘‍♀️ Yoga Workout Routines
 - 🍎 Healthy Diet Suggestions
 - ⭐ Client Review Section (with Star Ratings)
-- 🧑‍💻 Admin Panel for Review Deletion
-- 🎯 Responsive and User-Friendly Design
 
 # Technologies Used
 - Frontend: HTML, CSS, JavaScript
