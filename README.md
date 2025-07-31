@@ -1,5 +1,5 @@
 # project
-this is my first Git repository
+This is my first Git repository
 author-Jagruti
 
 # 💪 Fitness Website
